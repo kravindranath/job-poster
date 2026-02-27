@@ -1,4 +1,4 @@
-const CACHE_NAME = 'csr-jobs-v1';
+const CACHE_NAME = 'csr-jobs-v2';
 const assetsToCache = [
     './',
     './index.html',
