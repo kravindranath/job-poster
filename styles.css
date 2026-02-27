@@ -3,8 +3,8 @@
     --card-bg: rgba(30, 41, 59, 0.7);
     --text-primary: #F8FAFC;
     --text-secondary: #94A3B8;
-    --accent-color: #10B981;
-    --accent-hover: #059669;
+    --accent-color: #3B82F6;
+    --accent-hover: #2563EB;
 }
 
 * {
@@ -20,9 +20,9 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     /* Rich glassmorphism background effect */
-    background-image: 
-        radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.15), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(56, 189, 248, 0.1), transparent 25%);
+    background-image:
+        radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.1), transparent 25%);
     background-attachment: fixed;
 }
 
@@ -52,7 +52,7 @@ header {
     height: 40px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--accent-color), #3B82F6);
-    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
 }
 
 .hero {
@@ -135,7 +135,7 @@ header {
 .job-card:hover {
     transform: translateY(-4px) scale(1.01);
     background: rgba(30, 41, 59, 0.85);
-    border-color: rgba(16, 185, 129, 0.2);
+    border-color: rgba(59, 130, 246, 0.2);
 }
 
 .job-header {
@@ -173,7 +173,7 @@ header {
 }
 
 .tag {
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     color: var(--accent-color);
     padding: 6px 12px;
     border-radius: 8px;
