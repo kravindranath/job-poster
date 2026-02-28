@@ -65,18 +65,8 @@ function App() {
 
   return (
     <div className="flex h-screen bg-gray-900 text-white font-sans overflow-hidden">
-      {/* Sidebar for CloudFormation JSON */}
-      <div className="w-1/2 p-6 border-r border-gray-700 flex flex-col bg-gray-900">
-        <h2 className="text-xl font-bold mb-4 text-blue-400">AWS CloudFormation Output</h2>
-        <div className="flex-1 bg-gray-800 rounded-lg p-4 overflow-auto border border-gray-700 custom-scrollbar shadow-inner">
-          <pre className="text-sm text-green-400 font-mono whitespace-pre-wrap">
-            {cfnJson}
-          </pre>
-        </div>
-      </div>
-
-      {/* Main Chat Area */}
-      <div className="w-1/2 flex flex-col bg-gray-800">
+      {/* Main Chat Area - Now on the Left */}
+      <div className="w-1/2 flex flex-col bg-gray-800 border-r border-gray-700">
         {/* Header */}
         <header className="p-6 border-b border-gray-700 bg-gray-900 flex items-center justify-between shadow-md z-10">
           <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -96,8 +86,8 @@ function App() {
             <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'} transform transition-all`}>
               <div
                 className={`max-w-[75%] rounded-2xl px-5 py-3 shadow-md ${msg.role === 'user'
-                    ? 'bg-blue-600 text-white rounded-br-none'
-                    : 'bg-gray-700 border border-gray-600 text-gray-200 rounded-tl-none'
+                  ? 'bg-blue-600 text-white rounded-br-none'
+                  : 'bg-gray-700 border border-gray-600 text-gray-200 rounded-tl-none'
                   }`}
               >
                 {msg.text}
@@ -124,6 +114,16 @@ function App() {
               Send
             </button>
           </form>
+        </div>
+      </div>
+
+      {/* Sidebar for CloudFormation JSON - Now on the Right */}
+      <div className="w-1/2 p-6 flex flex-col bg-gray-900">
+        <h2 className="text-xl font-bold mb-4 text-blue-400">AWS CloudFormation Output</h2>
+        <div className="flex-1 bg-gray-800 rounded-lg p-4 overflow-auto border border-gray-700 custom-scrollbar shadow-inner">
+          <pre className="text-sm text-green-400 font-mono whitespace-pre-wrap">
+            {cfnJson}
+          </pre>
         </div>
       </div>
 
